@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mira Psicanalista – Um novo ciclo</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff8f2; /* bege claro */
+            color: #444;
+        }
+
+        header {
+            background: #f9c2b1; /* salmão suave */
+            padding: 25px;
+            text-align: center;
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo {
+            font-size: 42px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        section {
+            padding: 30px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            color: #e8a363; /* amarelo queimado */
+            margin-bottom: 5px;
+        }
+
+        .btn-whats {
+            display: inline-block;
+            padding: 14px 25px;
+            background: #25d366;
+            color: white;
+            font-size: 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .btn-agendar {
+            display: inline-block;
+            padding: 14px 25px;
+            background: #e8a363;
+            color: white;
+            font-size: 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            background: #f9c2b1;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">DP</div>
+        Mira Psicanalista<br>
+        <small>“Um novo ciclo”</small>
+    </header>
+
+    <section id="sobre">
+        <h2>Sobre mim</h2>
+        <p>
+            Meu nome é <strong>Diomira Perpétua de Jesus</strong>, psicanalista clínica
+            (Registro 251550), com atendimentos online para todo brasil
