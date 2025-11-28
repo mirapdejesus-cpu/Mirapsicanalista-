@@ -1,0 +1,48 @@
+<!-- Salve como logo.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <!-- fundo transparente -->
+  <defs>
+    <linearGradient id="silver" x1="0" x2="1">
+      <stop offset="0" stop-color="#cfcfcf"/>
+      <stop offset="1" stop-color="#efefef"/>
+    </linearGradient>
+  </defs>
+
+  <!-- tronco estilizado prateado -->
+  <g transform="translate(400,420)">
+    <path d="M -30 180 C -28 110 -40 60 -18 -10 C -10 -40 10 -60 20 -90 C 30 -60 50 -40 60 -10 C 82 60 70 110 72 180 Z"
+          fill="url(#silver)" stroke="#bdbdbd" stroke-width="4" />
+    <!-- galhos finos -->
+    <path d="M -6 -20 C -40 -60 -80 -120 -120 -160" stroke="#bdbdbd" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 18 -30 C 48 -70 92 -120 132 -150" stroke="#bdbdbd" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 6 -60 C 20 -110 60 -150 110 -170" stroke="#c0c0c0" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- copas com flores brancas -->
+  <g transform="translate(400,180)">
+    <!-- clusters de flores (círculos brancos com sombra suave) -->
+    <g>
+      <circle cx="-120" cy="-10" r="28" fill="#ffffff" stroke="#f1f1f1" />
+      <circle cx="-90" cy="-40" r="22" fill="#ffffff" stroke="#f1f1f1"/>
+      <circle cx="-60" cy="-10" r="30" fill="#ffffff" stroke="#f1f1f1"/>
+      <circle cx="-30" cy="-45" r="20" fill="#ffffff" stroke="#f1f1f1"/>
+      <circle cx="10" cy="-20" r="26" fill="#ffffff" stroke="#f1f1f1"/>
+      <circle cx="60" cy="-40" r="22" fill="#ffffff" stroke="#f1f1f1"/>
+      <circle cx="100" cy="-10" r="28" fill="#ffffff" stroke="#f1f1f1"/>
+      <circle cx="40" cy="-5" r="18" fill="#ffffff" stroke="#f1f1f1"/>
+    </g>
+    <!-- leve brilho amarelo no centro das flores (sugerindo miolo) -->
+    <g fill="#f7df6a" opacity="0.9">
+      <circle cx="-60" cy="-10" r="4"/>
+      <circle cx="-120" cy="-10" r="4"/>
+      <circle cx="-30" cy="-45" r="3"/>
+      <circle cx="10" cy="-20" r="4"/>
+      <circle cx="100" cy="-10" r="4"/>
+    </g>
+  </g>
+
+  <!-- Texto do logo abaixo -->
+  <text x="50%" y="720" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="48" fill="#5b5b5b">mirapsicanalista</text>
+</svg>
