@@ -1,48 +1,149 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mira Psicanalista</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mira Psicanalista</title>
+  <style>
+    /* Reset e estilos básicos */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff5ee;
+      color: #333;
+    }
+
+    /* Cabeçalho e menu */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #f5d6c6; /* salmão claro */
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .logo svg {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      margin: 0 10px;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      color: #333;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav button:hover {
+      background-color: #ffe0b2;
+    }
+
+    /* Conteúdo */
+    section {
+      padding: 40px 20px;
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h1 {
+      color: #f08080; /* salmão */
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    /* Botão WhatsApp flutuante */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body>
 
-<header>
+  <header>
+    <div class="logo">
+      <!-- Logo árvore -->
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="30" fill="#f08080"/>
+        <polygon points="32,8 24,32 40,32" fill="#fff"/>
+        <rect x="30" y="32" width="4" height="20" fill="#8B4513"/>
+      </svg>
+      Mira Psicanalista
+    </div>
     <nav>
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre mim</a>
-        <a href="#agendamento">Agendamento</a>
+      <button onclick="showSection('inicio')">Início</button>
+      <button onclick="showSection('sobre')">Sobre mim</button>
+      <button onclick="showSection('agendamento')">Agendamento</button>
     </nav>
-</header>
+  </header>
 
-<!-- Início -->
-<section id="inicio">
-    <h1>Um novo ciclo</h1>
-    <p>Diomira Perpétua de Jesus • Psicanalista Clínica</p>
-    <p>A psicanálise é um espaço de acolhimento, reflexão e reconstrução. Aqui você pode falar, ser ouvida e compreender melhor sua própria história.</p>
-    <p>Atendimento online • Segunda a sexta<br>Registro profissional: 251550</p>
-</section>
+  <main>
+    <section id="inicio" class="active">
+      <h1>Bem-vindo(a) ao meu consultório!</h1>
+      <p>Sou Diomira Perpétua de Jesus, psicanalista clínica registrada (251550), e ofereço atendimento online de segunda a sexta-feira. Meu objetivo é apoiar você em um processo de autoconhecimento e transformação. Aqui, cada sessão é um passo para um novo ciclo em sua vida.</p>
+    </section>
 
-<!-- Sobre mim -->
-<section id="sobre">
-    <h2>Sobre mim</h2>
-    <p>Olá, meu nome é <strong>Diomira Perpétua de Jesus</strong>. Sou psicanalista clínica, atuo online de segunda a sexta, oferecendo apoio e acolhimento para seu desenvolvimento emocional e pessoal.</p>
-</section>
+    <section id="sobre">
+      <h1>Sobre Mim</h1>
+      <p>Sou formada em Administração com ênfase em RH e Gestão de Pessoas e possuo formação técnica em Contabilidade. Atualmente, atuo como psicanalista clínica com abordagem freudiana, auxiliando pacientes a compreenderem suas emoções, desejos e conflitos internos. Minha prática é individualizada, acolhedora e focada no desenvolvimento pessoal de cada paciente.</p>
+    </section>
 
-<!-- Agendamento -->
-<section id="agendamento">
-    <h2>Agendamento</h2>
-    <p>Para marcar sua sessão, entre em contato pelo WhatsApp ou envie um e-mail:</p>
-    <p>WhatsApp: <a href="https://wa.me/5511976104438" target="_blank">(11) 97610-4438</a></p>
-    <p>E-mail: <a href="mailto:psicamira7@gmail.com">psicamira7@gmail.com</a></p>
-</section>
+    <section id="agendamento">
+      <h1>Agendamento</h1>
+      <p>Para agendar uma sessão, entre em contato via WhatsApp clicando no botão abaixo ou envie um e-mail para <a href="mailto:psicamira7@gmail.com">psicamira7@gmail.com</a>. Atendimentos online de segunda a sexta-feira.</p>
+      <a href="https://wa.me/5511976104438" target="_blank" class="whatsapp-button" title="WhatsApp">
+        &#x1F4AC;
+      </a>
+    </section>
+  </main>
 
-<a href="https://wa.me/5511976104438" class="whatsapp-btn" target="_blank">📱</a>
-
-<footer>
-    <p>&copy; 2025 Mira Psicanalista. Todos os direitos reservados.</p>
-</footer>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
