@@ -1,127 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mira Psicanalista</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mira Psicanalista</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff8f0; /* bege suave */
+  }
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f8f4f2;
-            color: #333;
-        }
+  /* Cabeçalho com logo */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7d7c4; /* salmão claro */
+    padding: 20px;
+  }
 
-        header {
-            background-color: #f7c6b3;
-            padding: 20px;
-            text-align: center;
-        }
+  header img {
+    height: 60px;
+    margin-right: 15px;
+  }
 
-        header img {
-            width: 120px;
-        }
+  header h1 {
+    color: #e07b7b; /* salmão escuro */
+    font-size: 28px;
+    margin: 0;
+  }
 
-        nav {
-            background-color: #fff4e6;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+  /* Botões das abas */
+  .tab-buttons {
+    display: flex;
+    justify-content: center;
+    background-color: #e07b7b; /* salmão */
+  }
 
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            color: #333;
-        }
+  .tab-buttons button {
+    background-color: #e07b7b;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
 
-        .hero {
-            padding: 60px 20px;
-            text-align: center;
-        }
+  .tab-buttons button:hover {
+    background-color: #d66b6b;
+  }
 
-        .hero h1 {
-            font-size: 32px;
-            color: #dd8b63;
-            margin-bottom: 10px;
-        }
+  .tab-buttons button.active {
+    background-color: #d66b6b;
+  }
 
-        .hero p {
-            font-size: 18px;
-            color: #444;
-            max-width: 600px;
-            margin: auto;
-        }
+  /* Conteúdo das abas */
+  .tab-content {
+    display: none;
+    padding: 30px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
 
-        /* BOTÃO FLUTUANTE WHATSAPP */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 32px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-            z-index: 1000;
-        }
+  .tab-content.active {
+    display: block;
+  }
 
-        .whatsapp-float img {
-            width: 40px;
-            margin-top: 10px;
-        }
-    </style>
+  /* Links de contato */
+  .contact-info a {
+    color: #e07b7b;
+    text-decoration: none;
+    font-weight: bold;
+  }
+</style>
 </head>
-
 <body>
 
+<!-- Cabeçalho -->
 <header>
-    <img src="logo.svg" alt="Logo Mira Psicanalista">
+  <!-- Substitua "arvore.png" pelo arquivo real do seu logo -->
+  <img src="arvore.png" alt="Logo Mira Psicanalista">
+  <h1>Mira Psicanalista</h1>
 </header>
 
-<nav>
-    <a href="index.html">Início</a><section id="inicio" style="background-color:#FFE5B4; color:#333; padding:100px 20px; text-align:center;">
-    <!-- Logo DP -->
-    <div style="font-size:48px; font-weight:bold; color:#FF8C69; margin-bottom:20px;">DP</div>
+<!-- Botões das abas -->
+<div class="tab-buttons">
+  <button class="tab-link active" data-tab="inicio">Início</button>
+  <button class="tab-link" data-tab="sobre-mim">Sobre Mim</button>
+  <button class="tab-link" data-tab="agendamento">Agendamento</button>
+</div>
 
-    <!-- Título -->
-    <h1 style="font-size:36px; color:#FF8C69; margin-bottom:20px;">Bem-vindo à Mira Psicanalista</h1>
+<!-- Conteúdo das abas -->
+<div id="inicio" class="tab-content active">
+  <h2>Início</h2>
+  <p>Bem-vindo ao Mira Psicanalista! Aqui você encontra informações sobre nossos atendimentos online. Nosso objetivo é ajudá-lo a iniciar um <strong>novo ciclo</strong> em sua vida.</p>
+</div>
 
-    <!-- Subtítulo -->
-    <p style="font-size:20px; margin-bottom:30px;">Um novo ciclo para sua vida</p>
+<div id="sobre-mim" class="tab-content">
+  <h2>Sobre Mim</h2>
+  <p>Meu nome é <strong>Diomira Perpétua de Jesus</strong>, psicanalista clínica (Registro: 251550). Trabalho com atendimento online de segunda a sexta-feira, ajudando meus pacientes a explorar suas emoções, pensamentos e desejos mais profundos. <br><br>Minha abordagem é freudiana, respeitando o ritmo de cada paciente e oferecendo um espaço seguro para reflexão e autoconhecimento.</p>
+</div>
 
-    <!-- Texto sobre você -->
-    <p style="font-size:18px; max-width:700px; margin:0 auto 20px auto;">
-        Sou <strong>Diomira Perpétua de Jesus</strong>, psicanalista clínica, registro 251550.  
-        Realizo atendimentos online de segunda a sexta-feira, ajudando você a iniciar um novo ciclo de autoconhecimento e bem-estar.
-    </p>
+<div id="agendamento" class="tab-content">
+  <h2>Agendamento</h2>
+  <p>Para marcar sua sessão, entre em contato pelo WhatsApp ou e-mail:</p>
+  <p class="contact-info">
+    WhatsApp: <a href="https://wa.me/5511976104438" target="_blank">(11) 97610-4438</a><br>
+    E-mail: <a href="mailto:psicamira7@gmail.com">psicamira7@gmail.com</a>
+  </p>
+  <p>Atendimento online de segunda a sexta-feira.</p>
+</div>
 
-    <!-- Contato -->
-    <p style="font-size:18px; margin-top:20px;">
-        Contato: <strong>WhatsApp (11) 97610-4438</strong> | E-mail: <strong>psicamira7@gmail.com</strong>
-    </p>
-    </section>
-    <a href="sobre.html">Sobre Mim</a>
-    <a href="agendamento.html">Agendamento</a>
-</nav>
+<script>
+  const tabLinks = document.querySelectorAll('.tab-link');
+  const tabContents = document.querySelectorAll('.tab-content');
 
-<section class="hero">
-    <h1>Um novo ciclo começa aqui</h1>
-    <p>
-        Acolhimento, escuta e transformação através da psicanálise.
-        Atendimentos online com profissionalismo, ética e sigilo.
-    </p>
-</section>
+  tabLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      tabLinks.forEach(btn => btn.classList.remove('active'));
+      tabContents.forEach(content => content.classList.remove('active'));
 
-<!-- BOTÃO FLUTUANTE DO WHATSAPP -->
-<a class="whatsapp-float" href="https://wa.me/5511976104438" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-</a>
+      link.classList.add('active');
+      document.getElementById(link.dataset.tab).classList.add('active');
+    });
+  });
+</script>
 
 </body>
 </html>
