@@ -1,1 +1,145 @@
-Atualiza index.html com abas, logo e botão WhatsApp
+Atualiza index.html <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mira Psicanalista</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth; /* scroll suave */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fff5ee; /* bege claro */
+            color: #333;
+        }
+
+        /* Header / Menu */
+        header {
+            background-color: #ff8c69; /* salmão */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        header img {
+            height: 60px;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fffacd; /* amarelo claro */
+        }
+
+        /* Seções */
+        section {
+            padding: 80px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #inicio {
+            background-color: #fff5ee; /* bege */
+        }
+
+        #sobre {
+            background-color: #ffe4b5; /* amarelo suave */
+        }
+
+        #agendamento {
+            background-color: #fff5ee;
+        }
+
+        h1, h2 {
+            color: #ff6347; /* salmão mais forte */
+            margin-bottom: 20px;
+        }
+
+        p {
+            max-width: 600px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Botão WhatsApp flutuante */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            width: 65px;
+            height: 65px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            text-decoration: none;
+            z-index: 1000;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsivo */
+        @media(max-width: 768px){
+            nav a {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+            header img {
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo-arvore.png" alt="Logo Mira Psicanalista">
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre mim</a>
+            <a href="#agendamento">Agendamento</a>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h1>Bem-vindo(a) ao Mira Psicanalista</h1>
+        <p>Um novo ciclo de autoconhecimento e cuidado com sua saúde mental. Aqui, cada sessão é pensada para você se sentir ouvido(a) e acolhido(a).</p>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>Sou < abas, logo e botão WhatsApp
