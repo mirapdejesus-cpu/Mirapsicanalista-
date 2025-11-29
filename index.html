@@ -4,96 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mira Psicanalista</title>
-    <link rel="icon" href="logo-arvore.png" type="image/png">
-    <style>
-        /* Cores e fontes */
-        :root {
-            --salmão: #FFA07A;
-            --bege: #F5F5DC;
-            --amarelo: #FFD700;
-            --branco: #FFFFFF;
-            --fonte: Arial, sans-serif;
-        }
-        body {
-            margin: 0;
-            font-family: var(--fonte);
-            background-color: var(--bege);
-            scroll-behavior: smooth;
-        }
-        /* Cabeçalho e menu */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: var(--salmão);
-            padding: 15px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            z-index: 1000;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-        nav a {
-            color: var(--branco);
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        nav a:hover {
-            color: var(--amarelo);
-        }
-        /* Seções */
-        section {
-            padding: 120px 20px 60px 20px;
-            text-align: center;
-        }
-        #inicio {
-            background-color: var(--branco);
-        }
-        #sobre {
-            background-color: var(--salmão);
-            color: var(--branco);
-        }
-        #agendamento {
-            background-color: var(--amarelo);
-            color: #333;
-        }
-        /* Botão WhatsApp */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25D366;
-            color: var(--branco);
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            text-decoration: none;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-            z-index: 1001;
-        }
-        /* Rodapé */
-        footer {
-            background-color: var(--salmão);
-            color: var(--branco);
-            padding: 20px;
-            text-align: center;
-        }
-        img.logo {
-            width: 150px;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
     <nav>
         <a href="#inicio">Início</a>
-        <a
+        <a href="#sobre">Sobre mim</a>
+        <a href="#agendamento">Agendamento</a>
+    </nav>
+</header>
+
+<!-- Início -->
+<section id="inicio">
+    <h1>Um novo ciclo</h1>
+    <p>Diomira Perpétua de Jesus • Psicanalista Clínica</p>
+    <p>A psicanálise é um espaço de acolhimento, reflexão e reconstrução. Aqui você pode falar, ser ouvida e compreender melhor sua própria história.</p>
+    <p>Atendimento online • Segunda a sexta<br>Registro profissional: 251550</p>
+</section>
+
+<!-- Sobre mim -->
+<section id="sobre">
+    <h2>Sobre mim</h2>
+    <p>Olá, meu nome é <strong>Diomira Perpétua de Jesus</strong>. Sou psicanalista clínica, atuo online de segunda a sexta, oferecendo apoio e acolhimento para seu desenvolvimento emocional e pessoal.</p>
+</section>
+
+<!-- Agendamento -->
+<section id="agendamento">
+    <h2>Agendamento</h2>
+    <p>Para marcar sua sessão, entre em contato pelo WhatsApp ou envie um e-mail:</p>
+    <p>WhatsApp: <a href="https://wa.me/5511976104438" target="_blank">(11) 97610-4438</a></p>
+    <p>E-mail: <a href="mailto:psicamira7@gmail.com">psicamira7@gmail.com</a></p>
+</section>
+
+<a href="https://wa.me/5511976104438" class="whatsapp-btn" target="_blank">📱</a>
+
+<footer>
+    <p>&copy; 2025 Mira Psicanalista. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
