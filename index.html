@@ -29,15 +29,19 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      font-weight: bold;
-      font-size: 24px;
       margin-bottom: 10px;
     }
 
     .logo svg {
-      width: 70px;
-      height: 70px;
+      width: 80px;
+      height: 80px;
       margin-bottom: 5px;
+    }
+
+    .logo-text {
+      font-weight: bold;
+      font-size: 20px;
+      color: #333;
     }
 
     nav {
@@ -107,30 +111,28 @@
 
   <header>
     <div class="logo">
-      <!-- Logo cérebro moderno e detalhado -->
+      <!-- Logo árvore colorida -->
       <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-        <!-- Esquerda do cérebro -->
-        <path d="M32 2
-                 C20 2, 12 14, 12 26
-                 C12 38, 20 50, 32 50
-                 C30 40, 28 32, 32 26
-                 C34 22, 34 18, 32 2 Z"
-              fill="#f08080" stroke="#fdd7a0" stroke-width="1"/>
-        <!-- Direita do cérebro -->
-        <path d="M32 2
-                 C44 2, 52 14, 52 26
-                 C52 38, 44 50, 32 50
-                 C34 40, 36 32, 32 26
-                 C30 22, 30 18, 32 2 Z"
-              fill="#fdd7a0" stroke="#fff1c1" stroke-width="1"/>
-        <!-- Sulcos detalhados -->
-        <path d="M32 10 C28 12, 28 20, 32 24" stroke="#fff1c1" stroke-width="1.5" fill="none"/>
-        <path d="M32 10 C36 12, 36 20, 32 24" stroke="#fff1c1" stroke-width="1.5" fill="none"/>
-        <path d="M32 24 C30 28, 30 34, 32 38" stroke="#fff1c1" stroke-width="1.5" fill="none"/>
-        <path d="M32 24 C34 28, 34 34, 32 38" stroke="#fff1c1" stroke-width="1.5" fill="none"/>
+        <!-- Tronco -->
+        <rect x="30" y="32" width="4" height="20" fill="#8B4513"/>
+        <!-- Galhos e folhas -->
+        <circle cx="32" cy="24" r="12" fill="#228B22"/>
+        <circle cx="24" cy="28" r="8" fill="#228B22"/>
+        <circle cx="40" cy="28" r="8" fill="#228B22"/>
+        <circle cx="28" cy="18" r="6" fill="#228B22"/>
+        <circle cx="36" cy="18" r="6" fill="#228B22"/>
+        <!-- Flores -->
+        <circle cx="32" cy="20" r="2" fill="#FF69B4"/>
+        <circle cx="26" cy="22" r="2" fill="#FFD700"/>
+        <circle cx="38" cy="22" r="2" fill="#1E90FF"/>
+        <circle cx="30" cy="26" r="2" fill="#FF69B4"/>
+        <circle cx="34" cy="26" r="2" fill="#FFD700"/>
+        <circle cx="24" cy="26" r="2" fill="#1E90FF"/>
+        <circle cx="40" cy="26" r="2" fill="#FF69B4"/>
       </svg>
-      Mira
+      <div class="logo-text">Mira Psicanalista</div>
     </div>
+
     <nav>
       <button onclick="showSection('inicio')">Início</button>
       <button onclick="showSection('sobre')">Sobre mim</button>
@@ -139,4 +141,32 @@
   </header>
 
   <main>
-    <
+    <section id="inicio" class="active">
+      <h1>Bem-vindo(a) ao meu consultório!</h1>
+      <p>Sou Diomira Perpétua de Jesus, psicanalista clínica registrada (251550), e ofereço atendimento online de segunda a sexta-feira. Meu objetivo é apoiar você em um processo de autoconhecimento e transformação. Aqui, cada sessão é um passo para um novo ciclo em sua vida.</p>
+    </section>
+
+    <section id="sobre">
+      <h1>Sobre Mim</h1>
+      <p>Sou formada em Administração com ênfase em RH e Gestão de Pessoas e possuo formação técnica em Contabilidade. Atualmente, atuo como psicanalista clínica com abordagem freudiana, auxiliando pacientes a compreenderem suas emoções, desejos e conflitos internos. Minha prática é individualizada, acolhedora e focada no desenvolvimento pessoal de cada paciente.</p>
+    </section>
+
+    <section id="agendamento">
+      <h1>Agendamento</h1>
+      <p>Para agendar uma sessão, entre em contato via WhatsApp clicando no botão abaixo ou envie um e-mail para <a href="mailto:psicamira7@gmail.com">psicamira7@gmail.com</a>. Atendimentos online de segunda a sexta-feira.</p>
+      <a href="https://wa.me/5511976104438" target="_blank" class="whatsapp-button" title="WhatsApp">
+        &#x1F4AC;
+      </a>
+    </section>
+  </main>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
