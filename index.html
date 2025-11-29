@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mira Psicanalista</title>
   <style>
-    /* Reset e estilos básicos */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -16,10 +15,10 @@
     /* Cabeçalho e menu */
     header {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
       padding: 10px 20px;
-      background-color: #f5d6c6; /* salmão claro */
+      background-color: #f5d6c6;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
@@ -28,21 +27,27 @@
 
     .logo {
       display: flex;
+      flex-direction: column;
       align-items: center;
       font-weight: bold;
       font-size: 24px;
+      margin-bottom: 10px;
     }
 
     .logo svg {
-      width: 50px;
-      height: 50px;
-      margin-right: 10px;
+      width: 70px;
+      height: 70px;
+      margin-bottom: 5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
     }
 
     nav button {
       background: none;
       border: none;
-      margin: 0 10px;
       padding: 8px 16px;
       font-size: 16px;
       cursor: pointer;
@@ -66,7 +71,7 @@
     }
 
     h1 {
-      color: #f08080; /* salmão */
+      color: #f08080;
     }
 
     p {
@@ -102,18 +107,29 @@
 
   <header>
     <div class="logo">
-      <!-- Logo árvore detalhada -->
+      <!-- Logo cérebro moderno e detalhado -->
       <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-        <!-- Tronco -->
-        <rect x="30" y="32" width="4" height="20" fill="#8B4513"/>
-        <!-- Folhagem principal -->
-        <circle cx="32" cy="24" r="12" fill="#f08080"/>
-        <circle cx="24" cy="28" r="8" fill="#fdd7a0"/>
-        <circle cx="40" cy="28" r="8" fill="#fdd7a0"/>
-        <circle cx="28" cy="18" r="6" fill="#fff1c1"/>
-        <circle cx="36" cy="18" r="6" fill="#fff1c1"/>
+        <!-- Esquerda do cérebro -->
+        <path d="M32 2
+                 C20 2, 12 14, 12 26
+                 C12 38, 20 50, 32 50
+                 C30 40, 28 32, 32 26
+                 C34 22, 34 18, 32 2 Z"
+              fill="#f08080" stroke="#fdd7a0" stroke-width="1"/>
+        <!-- Direita do cérebro -->
+        <path d="M32 2
+                 C44 2, 52 14, 52 26
+                 C52 38, 44 50, 32 50
+                 C34 40, 36 32, 32 26
+                 C30 22, 30 18, 32 2 Z"
+              fill="#fdd7a0" stroke="#fff1c1" stroke-width="1"/>
+        <!-- Sulcos detalhados -->
+        <path d="M32 10 C28 12, 28 20, 32 24" stroke="#fff1c1" stroke-width="1.5" fill="none"/>
+        <path d="M32 10 C36 12, 36 20, 32 24" stroke="#fff1c1" stroke-width="1.5" fill="none"/>
+        <path d="M32 24 C30 28, 30 34, 32 38" stroke="#fff1c1" stroke-width="1.5" fill="none"/>
+        <path d="M32 24 C34 28, 34 34, 32 38" stroke="#fff1c1" stroke-width="1.5" fill="none"/>
       </svg>
-      Mira Psicanalista
+      Mira
     </div>
     <nav>
       <button onclick="showSection('inicio')">Início</button>
@@ -123,32 +139,4 @@
   </header>
 
   <main>
-    <section id="inicio" class="active">
-      <h1>Bem-vindo(a) ao meu consultório!</h1>
-      <p>Sou Diomira Perpétua de Jesus, psicanalista clínica registrada (251550), e ofereço atendimento online de segunda a sexta-feira. Meu objetivo é apoiar você em um processo de autoconhecimento e transformação. Aqui, cada sessão é um passo para um novo ciclo em sua vida.</p>
-    </section>
-
-    <section id="sobre">
-      <h1>Sobre Mim</h1>
-      <p>Sou formada em Administração com ênfase em RH e Gestão de Pessoas e possuo formação técnica em Contabilidade. Atualmente, atuo como psicanalista clínica com abordagem freudiana, auxiliando pacientes a compreenderem suas emoções, desejos e conflitos internos. Minha prática é individualizada, acolhedora e focada no desenvolvimento pessoal de cada paciente.</p>
-    </section>
-
-    <section id="agendamento">
-      <h1>Agendamento</h1>
-      <p>Para agendar uma sessão, entre em contato via WhatsApp clicando no botão abaixo ou envie um e-mail para <a href="mailto:psicamira7@gmail.com">psicamira7@gmail.com</a>. Atendimentos online de segunda a sexta-feira.</p>
-      <a href="https://wa.me/5511976104438" target="_blank" class="whatsapp-button" title="WhatsApp">
-        &#x1F4AC;
-      </a>
-    </section>
-  </main>
-
-  <script>
-    function showSection(id) {
-      const sections = document.querySelectorAll('section');
-      sections.forEach(sec => sec.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
-
-</body>
-</html>
+    <
