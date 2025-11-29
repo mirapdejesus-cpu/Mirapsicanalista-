@@ -5,20 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mira Psicanalista</title>
 <style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
   body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #fff8f0; /* bege suave */
+    color: #333;
   }
 
-  /* Cabeçalho com logo */
+  /* Cabeçalho */
   header {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #f7d7c4; /* salmão claro */
     padding: 20px;
+    flex-wrap: wrap;
   }
 
   header img {
@@ -29,7 +31,7 @@
   header h1 {
     color: #e07b7b; /* salmão escuro */
     font-size: 28px;
-    margin: 0;
+    text-align: center;
   }
 
   /* Botões das abas */
@@ -37,22 +39,22 @@
     display: flex;
     justify-content: center;
     background-color: #e07b7b; /* salmão */
+    flex-wrap: wrap;
   }
 
   .tab-buttons button {
     background-color: #e07b7b;
     border: none;
     color: white;
-    padding: 15px 30px;
+    padding: 15px 25px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
+    margin: 5px;
+    border-radius: 8px;
   }
 
-  .tab-buttons button:hover {
-    background-color: #d66b6b;
-  }
-
+  .tab-buttons button:hover,
   .tab-buttons button.active {
     background-color: #d66b6b;
   }
@@ -64,9 +66,10 @@
     text-align: center;
     background-color: #fff;
     margin: 20px auto;
-    border-radius: 10px;
-    max-width: 800px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    max-width: 900px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
   }
 
   .tab-content.active {
@@ -79,25 +82,62 @@
     text-decoration: none;
     font-weight: bold;
   }
+
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+
+    .tab-buttons button {
+      flex: 1 1 100%;
+    }
+  }
+
+  /* Botão flutuante WhatsApp */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 100;
+    transition: transform 0.2s;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
 </style>
 </head>
 <body>
 
-<!-- Cabeçalho -->
 <header>
-  <!-- Substitua "arvore.png" pelo arquivo real do seu logo -->
+  <!-- Substitua "arvore.png" pelo seu logo real -->
   <img src="arvore.png" alt="Logo Mira Psicanalista">
   <h1>Mira Psicanalista</h1>
 </header>
 
-<!-- Botões das abas -->
 <div class="tab-buttons">
   <button class="tab-link active" data-tab="inicio">Início</button>
   <button class="tab-link" data-tab="sobre-mim">Sobre Mim</button>
   <button class="tab-link" data-tab="agendamento">Agendamento</button>
 </div>
 
-<!-- Conteúdo das abas -->
 <div id="inicio" class="tab-content active">
   <h2>Início</h2>
   <p>Bem-vindo ao Mira Psicanalista! Aqui você encontra informações sobre nossos atendimentos online. Nosso objetivo é ajudá-lo a iniciar um <strong>novo ciclo</strong> em sua vida.</p>
@@ -105,7 +145,8 @@
 
 <div id="sobre-mim" class="tab-content">
   <h2>Sobre Mim</h2>
-  <p>Meu nome é <strong>Diomira Perpétua de Jesus</strong>, psicanalista clínica (Registro: 251550). Trabalho com atendimento online de segunda a sexta-feira, ajudando meus pacientes a explorar suas emoções, pensamentos e desejos mais profundos. <br><br>Minha abordagem é freudiana, respeitando o ritmo de cada paciente e oferecendo um espaço seguro para reflexão e autoconhecimento.</p>
+  <p>Meu nome é <strong>Diomira Perpétua de Jesus</strong>, psicanalista clínica (Registro: 251550). Trabalho com atendimento online de segunda a sexta-feira, ajudando meus pacientes a explorar suas emoções, pensamentos e desejos mais profundos.</p>
+  <p>Minha abordagem é freudiana, respeitando o ritmo de cada paciente e oferecendo um espaço seguro para reflexão e autoconhecimento.</p>
 </div>
 
 <div id="agendamento" class="tab-content">
@@ -117,6 +158,9 @@
   </p>
   <p>Atendimento online de segunda a sexta-feira.</p>
 </div>
+
+<!-- Botão flutuante WhatsApp -->
+<a href="https://wa.me/5511976104438" target="_blank" class="whatsapp-float" title="Fale conosco pelo WhatsApp">💬</a>
 
 <script>
   const tabLinks = document.querySelectorAll('.tab-link');
