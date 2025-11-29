@@ -1,145 +1,99 @@
-Atualiza index.html <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mira Psicanalista</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo-arvore.png" type="image/png">
     <style>
-        /* Reset básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* Cores e fontes */
+        :root {
+            --salmão: #FFA07A;
+            --bege: #F5F5DC;
+            --amarelo: #FFD700;
+            --branco: #FFFFFF;
+            --fonte: Arial, sans-serif;
         }
-
-        html {
-            scroll-behavior: smooth; /* scroll suave */
-        }
-
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #fff5ee; /* bege claro */
-            color: #333;
+            margin: 0;
+            font-family: var(--fonte);
+            background-color: var(--bege);
+            scroll-behavior: smooth;
         }
-
-        /* Header / Menu */
+        /* Cabeçalho e menu */
         header {
-            background-color: #ff8c69; /* salmão */
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 15px 30px;
-            position: sticky;
+            position: fixed;
             top: 0;
+            width: 100%;
+            background-color: var(--salmão);
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
             z-index: 1000;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-
-        header img {
-            height: 60px;
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
         }
-
         nav a {
-            margin-left: 20px;
+            color: var(--branco);
             text-decoration: none;
-            color: white;
-            font-weight: 700;
-            transition: color 0.3s;
+            font-weight: bold;
+            font-size: 18px;
         }
-
         nav a:hover {
-            color: #fffacd; /* amarelo claro */
+            color: var(--amarelo);
         }
-
         /* Seções */
         section {
-            padding: 80px 20px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            padding: 120px 20px 60px 20px;
             text-align: center;
         }
-
         #inicio {
-            background-color: #fff5ee; /* bege */
+            background-color: var(--branco);
         }
-
         #sobre {
-            background-color: #ffe4b5; /* amarelo suave */
+            background-color: var(--salmão);
+            color: var(--branco);
         }
-
         #agendamento {
-            background-color: #fff5ee;
+            background-color: var(--amarelo);
+            color: #333;
         }
-
-        h1, h2 {
-            color: #ff6347; /* salmão mais forte */
-            margin-bottom: 20px;
-        }
-
-        p {
-            max-width: 600px;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        /* Botão WhatsApp flutuante */
-        .whatsapp-button {
+        /* Botão WhatsApp */
+        .whatsapp-btn {
             position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background-color: #25d366;
-            color: white;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: var(--branco);
             border-radius: 50%;
-            width: 65px;
-            height: 65px;
+            width: 60px;
+            height: 60px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            font-size: 32px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            justify-content: center;
+            font-size: 30px;
             text-decoration: none;
-            z-index: 1000;
-            animation: pulse 2s infinite;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            z-index: 1001;
         }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+        /* Rodapé */
+        footer {
+            background-color: var(--salmão);
+            color: var(--branco);
+            padding: 20px;
+            text-align: center;
         }
-
-        /* Responsivo */
-        @media(max-width: 768px){
-            nav a {
-                margin-left: 10px;
-                font-size: 14px;
-            }
-            header img {
-                height: 50px;
-            }
+        img.logo {
+            width: 150px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="logo-arvore.png" alt="Logo Mira Psicanalista">
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre mim</a>
-            <a href="#agendamento">Agendamento</a>
-        </nav>
-    </header>
-
-    <section id="inicio">
-        <h1>Bem-vindo(a) ao Mira Psicanalista</h1>
-        <p>Um novo ciclo de autoconhecimento e cuidado com sua saúde mental. Aqui, cada sessão é pensada para você se sentir ouvido(a) e acolhido(a).</p>
-    </section>
-
-    <section id="sobre">
-        <h2>Sobre Mim</h2>
-        <p>Sou < abas, logo e botão WhatsApp
+<header>
+    <nav>
+        <a href="#inicio">Início</a>
+        <a
